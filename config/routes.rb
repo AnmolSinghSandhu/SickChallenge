@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'pages/lizards'
+
   get 'pages/home', to: 'pages#home', as: 'home'
 
   get 'pages/about_us', to: 'pages#about', as: 'about'
+
+  get 'lizards/:number', to: 'pages#lizards', as: 'lizard', number: /\d+/
 
   root to: 'pages#home'
 
