@@ -1,0 +1,4 @@
+<h1>Foods#index</h1>
+<% @foods.each do |food| %>
+  <%= render partial: 'food', object: food, locals: { display_food_link: true } %>
+<% end %>

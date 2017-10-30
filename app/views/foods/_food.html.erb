@@ -1,0 +1,7 @@
+<p>
+<% if display_food_link %>
+  Dish: <%= link_to food.dish, show_path(food) %>
+<% else %>
+  Dish: <%= food.dish %>
+<% end %>
+</p>

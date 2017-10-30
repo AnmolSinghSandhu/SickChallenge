@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'foods/index'
+
+  get 'foods/show.:id', to: 'foods#show', as: 'show', id: /\d+/
+
   get 'pages/lizards'
 
   get 'pages/home', to: 'pages#home', as: 'home'
